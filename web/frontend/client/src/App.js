@@ -41,7 +41,7 @@ class App extends Component {
     // Stores a given value, 5 by default.
 
     const user_val =document.getElementById("input").value ;
-    await contract.methods.set().send({ from: accounts[0] });
+    await contract.methods.set(8).send({ from: accounts[0] });
 
     // Get the value from the contract to prove it worked.
     const response = await contract.methods.get().call();
